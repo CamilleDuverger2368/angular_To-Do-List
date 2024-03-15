@@ -1,0 +1,32 @@
+.to-do-list {
+
+    width: 100%;
+    max-height: 70vh;
+    margin: 2vh auto;
+    border-radius: 5px;
+    overflow: scroll;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    /* center element */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    @media screen and (max-width: 1100px) {
+
+        border-radius: 0;
+    }
+}
+
+.to-do-list::-webkit-scrollbar {
+
+    display: none;
+}
+
+li {
+
+    width: 100%;
+}

@@ -1,0 +1,11 @@
+<form class="new-task" #taskForm="ngForm" (ngSubmit)="onSubmit(taskForm)">
+    <input ngModel name="text" class="input-task" type="text" placeholder="Je dois ..." />
+    <div class="select">
+      <select ngModel name="velocity">
+          <option value="">Medium</option>
+          <option value="hot">Urgent</option>
+          <option value="low">Chill</option>
+      </select>
+    </div>
+    <button class="add-task" type="submit">Ajouter</button>
+</form>

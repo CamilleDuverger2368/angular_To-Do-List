@@ -1,0 +1,17 @@
+<label *ngIf="task" class="task">
+    <input type="checkbox" (click)="onCheck(task)" [checked]="task.done" />
+    <div class="informations-task">
+        <input [(ngModel)]="text" class="update-text" />
+        <div class="select update-velocity">
+            <select [(ngModel)]="velocity">
+                <option value="hot">Urgent</option>
+                <option value="medium">Medium</option>
+                <option value="low">Chill</option>
+            </select>
+        </div>
+    </div>
+    <div class="actions-task">
+        <button (click)="onSubmit(task)" class="action">Enregistrer</button>
+        <button (click)="onRemove(task)" class="action remove">Supprimer</button>
+    </div>
+</label>

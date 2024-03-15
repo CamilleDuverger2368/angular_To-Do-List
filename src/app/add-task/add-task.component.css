@@ -1,0 +1,83 @@
+.new-task {
+
+    width: 90%;
+    max-width: 450px;
+    margin: 2vh auto;
+
+    /* center element */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.input-task {
+
+    height: 4vh;
+    width: 40%;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border: 3px solid rgba(231, 112, 69, 0);
+}
+
+.input-task:focus {
+
+    border: 3px solid rgba(231, 112, 69, 1);
+}
+
+.select {
+
+    position: relative;
+    display: flex;
+    width: 30%;
+    height: 4vh;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.select::after {
+
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .5em;
+    color: whitesmoke;
+    background-color: rgba(231, 112, 69, 1);
+    pointer-events: none;
+}
+
+.select:hover::after {
+
+    color: rgb(138, 138, 138);
+}
+
+select {
+
+    flex: 1;
+    padding: 0 1em;
+    color: whitesmoke;
+    background-color: rgb(231, 92, 42);
+    background-image: none;
+    cursor: pointer;
+}
+
+select::-ms-expand {
+
+    display: none;
+}
+
+.add-task {
+
+    width: 20%;
+    padding: .75vh 5px;
+    border-radius: 5px;
+    border: 2px solid rgba(231, 112, 69, 1);
+    color: rgba(231, 112, 69, 1);
+}
+
+.add-task:hover, .add-task:active {
+
+    background-color: rgba(231, 112, 69, 1);
+    color: whitesmoke;
+}

@@ -1,0 +1,10 @@
+<label *ngIf="task" class="task" [class.hot]="task.velocity === 'hot'" [class.medium]="task.velocity === 'medium'" [class.low]="task.velocity === 'low'">
+    <input type="checkbox" (click)="onCheck(task)" [checked]="task.done" />
+    <div class="informations-task">
+        {{ task.text }}
+    </div>
+    <div class="actions-task">
+        <button (click)="onEdit(task)" class="action">Modifier</button>
+        <button (click)="onRemove(task)" class="action remove">Supprimer</button>
+    </div>
+</label>

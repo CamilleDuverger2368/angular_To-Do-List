@@ -1,0 +1,40 @@
+.filter {
+
+    width: 10%;
+    height: 4vh;
+    padding: 0 1em;
+    border-radius: 5px;
+    background-color: unset;
+    border: 2px solid rgba(231, 112, 69, 1);
+    color: rgba(231, 112, 69, 1);
+    background-image: none;
+    cursor: pointer;
+
+    /* center element */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    @media screen and (max-width: 450px) {
+
+        width: 25%;
+    }
+}
+
+.up::after {
+
+    content: '\25BC';
+    rotate: 180deg;
+}
+
+.down::after {
+
+    content: '\25BC';
+}
+
+.active {
+
+    background-color: rgba(231, 112, 69, 1);
+    color: whitesmoke;
+}

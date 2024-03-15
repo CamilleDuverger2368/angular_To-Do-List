@@ -1,0 +1,9 @@
+<app-add-task class="container"></app-add-task>
+<app-date-emergency-filters class="container row"></app-date-emergency-filters>
+<ul class="to-do-list">
+    <li *ngFor="let task of filtered">
+        <app-task-details *ngIf="task !== editingTask" [task]="task" [(editingTask)]="editingTask"></app-task-details>
+        <app-task-edit *ngIf="task === editingTask" [task]="task" [(editingTask)]="editingTask"></app-task-edit>
+    </li>
+</ul>
+<app-all-done-to-do-filters *ngIf="tasks.length > 0" class="container row"></app-all-done-to-do-filters>
